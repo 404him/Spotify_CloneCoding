@@ -1,5 +1,6 @@
 :root{
     --spotify-color: #1FD75F;
+    --footer-height: 40px;
 }
 
 html, body, *{
@@ -18,14 +19,12 @@ body{
     height: 100vh;
 }
 
-.container{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
+.home{
+    background-color: red;
+    mask:url(assets/About.svg) no-repeat center;
 }
 
 .left{
-    height: 100%;
     background-color: black;
     position: relative;
     width: 300px;
@@ -46,7 +45,7 @@ body{
 }
 
 .gray-filtered{
-    filter: invert(0.5) sepia(70) saturate(0) hue-rotate(0);
+    filter: invert(0.5) sepia(70) saturate(0) hue-rotate(0deg);
 }
 
 .menu ul {
@@ -76,6 +75,14 @@ body{
     left: 8px;
 }
 
+.menu ul li:first-child() a img{
+    filter: invert(0.5) sepia(0) saturate(89) hue-rotate(75deg) !important;
+}
+
+.menu li:first-child span{
+    color: white !important;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -102,6 +109,12 @@ body{
     left: 0;
 }
 
+.container{
+    height: calc(100vh - var(--footer-height)) !important;
+    display: flex;
+    flex-direction: row;
+}
+
 .arrow-container{
     background-color: #434343;
     border-radius: 50%;
@@ -110,7 +123,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 15px !important;
 }
 
 .playlist-arrows{
@@ -130,19 +143,19 @@ body{
 
 .playlist-top-email{
     display: flex;
-    flex-direction: row;
     align-items: center;
     background-color: #434343;
     border-radius: 20px;
     color: white;
 }
 
-.playlist-top-email .arrow-container{
-    background-color: #545354;
+.playlist-headerl .arrow-container{
+    background-color: #545353;
+    margin: 2px;
 }
 
 .playlist-top-email span{
-    padding: 0 10p;
+    padding: 0 10px;
 }
 
 .playlist-header {
@@ -187,7 +200,7 @@ body{
 .playlist-description{
     font-size: 16px;
     font-weight: 400;
-    margin-top: 28px;
+    margin-top: 20px;
     color: #A9A9A9;
     font: "AvenirLTStd-Black";
 }
@@ -214,7 +227,7 @@ body{
 }
 
 .playlist-songs-container{
-    height: 100vh;
+    height: 1000px;
     background: rgb(95,95,95);
     background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(18,18,18,1) 22%, rgba(18,18,18,1) 100%);
     padding: 20px;
@@ -230,14 +243,20 @@ body{
     align-items: center;
 }
 
+.playlist-buttons-like svg path{
+    fill: var(--spotify-color)
+}
+
 .playlist-buttons-like, .playlist-buttons-download, .playlist-buttons-three-dot{
     margin-left: 20px;
 }
 
+.playlist-buttons-download svg path, .playlist-buttons-three-dot svg path, .playlist-buttons-search svg path{
+    fill: #CACACA;
+}
+
 .playlist-buttons-order{
     color: #A9A9A9;
-    position: relative;
-    top: -2px;
     margin-left: 20px;
 }
 
@@ -256,9 +275,11 @@ body{
 }
 
 .playlist-songs table tr th{
-    font-weight: 200;
+    font-weight: 600;
     font-size: 14px;
+    font-weight: 200;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .playlist-songs table tr:first-of-type{
