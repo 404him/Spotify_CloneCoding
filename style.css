@@ -212,3 +212,87 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+.playlist-songs-container{
+    height: 100vh;
+    background: rgb(95,95,95);
+    background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(18,18,18,1) 22%, rgba(18,18,18,1) 100%);
+    padding: 20px;
+}
+
+.playlist-buttons-resume-pause{
+    background-color: var(--spotify-color);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist-buttons-like, .playlist-buttons-download, .playlist-buttons-three-dot{
+    margin-left: 20px;
+}
+
+.playlist-buttons-order{
+    color: #A9A9A9;
+    position: relative;
+    top: -2px;
+    margin-left: 20px;
+}
+
+.playlist-songs{
+    margin-top: 20px;
+}
+
+.playlist-songs table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.playlist table tr td, .playlist-songs tr th{
+    padding: 10px;
+    color: #CACACA;
+}
+
+.playlist-songs table tr th{
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.playlist-songs table tr:first-of-type{
+    border-bottom: 1px solid #CACACA;
+}
+
+.playlist-songs table th{
+    text-align: left;
+}
+
+.song-image img{
+    width: 34px;
+    height: 34px;
+}
+
+.song-name, .footer-player-left-song-name {
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+
+.song-name-artist{
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+.song-artist, .song-album, .song-date-added, tr td:first-of-type, .song-duration  {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #848485;
+}
+
+.song-titlr{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
