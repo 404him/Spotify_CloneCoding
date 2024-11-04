@@ -3,13 +3,13 @@ const path = require('node:path')
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    titleBarStyle: "hidden",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
+  win.maximize();
   win.loadFile('index.html')
 }
 

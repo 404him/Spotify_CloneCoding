@@ -1,5 +1,5 @@
 :root{
-    --spotify-color: #1FD75F;
+    --spotify-color: #1db954;
     --footer-height: 40px;
 }
 
@@ -123,7 +123,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px !important;
 }
 
 .playlist-arrows{
@@ -149,8 +148,8 @@ body{
     color: white;
 }
 
-.playlist-headerl .arrow-container{
-    background-color: #545353;
+.playlist-header .arrow-container{
+    background-color: #535353;
     margin: 2px;
 }
 
@@ -160,8 +159,8 @@ body{
 
 .playlist-header {
     padding: 20px;
-    background: rgb(239,239,238);
-    background: linear-gradient(180deg, rgba(239,239,238,1) 0%, rgba(120,120,121,1) 100%);
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%);
 }
 
 .playlist-content { 
@@ -174,9 +173,9 @@ body{
 .playlist-cover img{
     width: 250px;
     height: 250px;
-    box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
-    -webkit-box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
-    -moz-box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
+    box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
 }
 
 .playlist-info{
@@ -201,8 +200,7 @@ body{
     font-size: 16px;
     font-weight: 400;
     margin-top: 20px;
-    color: #A9A9A9;
-    font: "AvenirLTStd-Black";
+    color: #B5B5B5;
 }
 
 .playlist-stats img{
@@ -256,8 +254,8 @@ body{
 }
 
 .playlist-buttons-order{
-    color: #A9A9A9;
     margin-left: 20px;
+    color: #CACACA;
 }
 
 .playlist-songs{
@@ -269,7 +267,7 @@ body{
     width: 100%;
 }
 
-.playlist table tr td, .playlist-songs tr th{
+.playlist-songs table tr td, .playlist-songs table tr th{
     padding: 10px;
     color: #CACACA;
 }
@@ -290,9 +288,22 @@ body{
     text-align: left;
 }
 
+.playlist-songs table tr th:first-child{
+    width: 2%;
+}
+
+.playlist-songs table tr th:nth-child(2) {
+    width: 40%;
+}
+
 .song-image img{
     width: 34px;
     height: 34px;
+}
+
+.song-name-album{
+    padding-left: 15px;
+    letter-spacing: 0.5px;
 }
 
 .song-name, .footer-player-left-song-name {
@@ -301,19 +312,108 @@ body{
     color: white;
 }
 
-.song-name-artist{
-    padding-left: 15px;
-    letter-spacing: 0.5px;
-}
-
-.song-artist, .song-album, .song-date-added, tr td:first-of-type, .song-duration  {
+.song-artist, .song-album, .song-date-added, .player-time, .song-duration, .footer-player-left-song-artist  {
     font-size: 14px;
     margin-top: 6px;
-    color: #848485;
+    color: #898989 !important;
 }
 
-.song-titlr{
+.song-title{
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+.footer-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #181818;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+}
+
+.footer-player-left-like svg path{
+    fill: var(--spotify-color);
+}
+
+.footer-player-left-like{
+    padding-left: 30px;
+}
+
+.footer-player-left{
+    display: flex;
+    align-items: center;
+}
+
+.footer-player-middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-player-middle-buttons img{
+    width: 15px;
+    padding: 15px;
+}
+
+.footer-player-middle-buttons, .footer-player-meddle-slider{
+    display: flex;
+    justify-content: center;
+}
+
+.pause-button {
+    position: relative;
+    display: inline-block;
+    width: 36px !important;
+    height: 36px !important;
+    background-color: var(--spotify-color) !important;
+    border-radius: 50%;
+    margin: 0 8px;
+    top: 4px;
+}
+
+.pause-button img {
+    position: relative;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    filter: none !important;
+    left: -4px;
+    top: -4px;
+}
+
+.player-slider input{
+    -webkit-appearance: var(--spotify-color);
+    width: 100%;
+    height: 5px;
+    background-color: #6a6a6a;
+    border-radius: 5px;
+    position: relative;
+    border: none;
+}
+
+.footer-player-meddle-slider {
+    display: flex;
+    align-items: center;
+}
+
+.player-time{
+    padding: 0 10px;
+}
+
+
+.footer-player-right-buttons{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 30px;
+}
+
+.footer-player-right-buttons img{
+    width: 16px;
+    margin-right: 20px;
 }
