@@ -105,7 +105,7 @@ body{
 .current-song-cover img{
     position: absolute;
     width: 100%;
-    bottom: 40px;
+    bottom: 100px;
     left: 0;
 }
 
@@ -254,6 +254,7 @@ body{
 }
 
 .playlist-buttons-order{
+    margin-top: -23px;
     margin-left: 20px;
     color: #CACACA;
 }
@@ -333,7 +334,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: var(--footer-height);
+    height: 90px;
 }
 
 .footer-player-left-like svg path{
@@ -364,6 +365,7 @@ body{
 .footer-player-middle-buttons, .footer-player-meddle-slider{
     display: flex;
     justify-content: center;
+    margin-left: 300px;
 }
 
 .pause-button {
@@ -388,7 +390,7 @@ body{
 
 .player-slider input{
     -webkit-appearance: var(--spotify-color);
-    width: 100%;
+    width: 95%;
     height: 5px;
     background-color: #6a6a6a;
     border-radius: 5px;
